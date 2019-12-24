@@ -150,21 +150,23 @@ while True:
 
     # Nemesis, every 4th person gets one!
     number_of_partiers = len(party_people.keys())
-    print(f"Number of partiers is {number_of_partiers}")
+    nemesis = None
+    their_name = None
     if number_of_partiers > 1 and number_of_partiers % 4 == 0:
-        print("Doing nemesis!")
         nemesis = random.sample(party_people.keys(), 1)[0]
         their_name = party_people[nemesis]
 
         print(colored('   Nemesis:', 'blue'),
             colored(nemesis, 'yellow', attrs=["bold"]),
-            colored(f"(played by {their_name})", white))
+            f"(played by {their_name})")
 
         print()
-        print("You can let your nemesis know that you have arrived, and are here for revenge. Or you can surprise them later! If you don't know what your nemesis looks like after their facial reconstruction, I guess you've got some work ahead of you!")
+        print("            You can let them know you're here for revenge.")
+        print("            Or you can surprise them later!")
+        print("            If you don't know them, TOO BAD!")
 
     print()
-    print("Be honest. Did you write it down, or do you just want to start over? (hit o to start over and return the name to the pool, any other key to party!)")
+    print("Be honest. Did you write all that down, or do you just want to start over? (hit o to start over and return the name to the pool, any other key to party!)")
     answer = getch()
 
     if answer.lower() != "o":
@@ -172,7 +174,7 @@ while True:
 
         # Write name to names-used.txt so it only gets used once
         with open('character-dump.txt', 'a') as f:
-            f.write(f"{real_name}: {name}, {occupation}. {strength}, {weakness}")
+            f.write(f"{real_name}: {name}, {occupation}. Strength: {strength}. Weakness: {weakness}. Nemesis: {nemesis}, {their_name}")
             f.write("\n")
         with open('names-used.txt', 'a') as f:
             f.write(name)
