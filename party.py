@@ -31,6 +31,8 @@ def load_file(path):
 def clear():
     os.system('clear')
 
+party_people = {}
+
 used = load_file("names-used.txt")
 weird = load_file("names.txt") - used
 male = load_file("names-male.txt") - used
@@ -111,6 +113,9 @@ while True:
           colored('of', 'white', attrs=["dark"]),
           colored('OUR LIVES', 'red', attrs=["bold"]))
     print()
+
+    real_name = input("Please enter your (actual) name and then hit ENTER: ")
+
     name = None
     while not name:
         name = pick_name()
@@ -143,14 +148,32 @@ while True:
     print(colored('  Weakness:', 'blue'),
           colored(weakness, 'yellow', attrs=["bold"]))
 
-    # TODO: Nemesis, every 4th person gets one!
+    # Nemesis, every 4th person gets one!
+    number_of_partiers = len(party_people.keys())
+    print(f"Number of partiers is {number_of_partiers}")
+    if number_of_partiers > 1 and number_of_partiers % 4 == 0:
+        print("Doing nemesis!")
+        nemesis = random.sample(party_people.keys(), 1)[0]
+        their_name = party_people[nemesis]
+
+        print(colored('   Nemesis:', 'blue'),
+            colored(nemesis, 'yellow', attrs=["bold"]),
+            colored(f"(played by {their_name})", white))
+
+        print()
+        print("You can let your nemesis know that you have arrived, and are here for revenge. Or you can surprise them later! If you don't know what your nemesis looks like after their facial reconstruction, I guess you've got some work ahead of you!")
 
     print()
     print("Be honest. Did you write it down, or do you just want to start over? (hit o to start over and return the name to the pool, any other key to party!)")
     answer = getch()
 
     if answer.lower() != "o":
+        party_people[name] = real_name
+
         # Write name to names-used.txt so it only gets used once
+        with open('character-dump.txt', 'a') as f:
+            f.write(f"{real_name}: {name}, {occupation}. {strength}, {weakness}")
+            f.write("\n")
         with open('names-used.txt', 'a') as f:
             f.write(name)
             f.write("\n")
