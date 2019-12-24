@@ -5,7 +5,6 @@ Trial Lawyer
 Homebody
 Clothing Designer
 Handbag Designer
-Hat Designer
 Travel Agent
 Instagram Influencer
 Manufacturing
@@ -14,3 +13,61 @@ Roadie for <popular band>
 Socialite
 CEO
 Head of Security
+Cafeteria Supervisor
+Clown King
+Psychic
+Musician
+Neurologist
+Cybersecurity Advisor
+Children's Book Author
+Telemarketer
+Pawnbroker
+Realtor
+Leatherworker
+Sommelier
+Criminologist
+Rabbi
+Disaster Relief Worker
+Literary Visual Artist
+Romance Novelist
+Anthropologist
+Computer Scientist
+Air Traffic Controller
+Assistant Solicitor
+Private Investigator
+Bed and Breakfast Owner
+Gym Teacher
+Tutor
+Vape Dealer
+Makeup Artist
+Limo Driver
+Personal Shopper
+Racecar Driver
+Building Inspector
+Piano Teacher
+Botanist
+Pool Cleaner
+Principal Architect
+Veteran Receptionist
+Junior Gymnast
+Figure Skater
+Aspirational Comedian
+Casino Manager
+Heart Surgeon
+Bus Driver
+Tourism Manager
+Genius Hacker
+Assistant Manager for Concrete Sales
+Pastor
+Extra
+Helicopter Pilot
+Arms Dealer
+Pizzeria Owner
+Tailor
+Entertainment Attorney
+Archaeologist
+Overpaid Lower-Level Administrative Assistant
+Customs Officer
+Ex-Marine
+Professional Poker Player
+Cocaine Dealer

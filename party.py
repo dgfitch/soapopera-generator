@@ -37,6 +37,7 @@ male = load_file("names-male.txt") - used
 female = load_file("names-female.txt") - used
 
 occupations = load_file("occupations.txt")
+occupations_weird = load_file("occupations-weird.txt")
 strengths = load_file("strength.txt")
 weaknesses = load_file("weakness.txt")
 
@@ -50,7 +51,7 @@ def ok(thing):
         return thing
 
 def pick_name():
-    print("Would you like to have a non-gendered name? (y/N) ", end='', flush=True)
+    print("Would you like a non-gendered name? (y/N) ", end='', flush=True)
     answer = getch()
     print()
 
@@ -75,7 +76,14 @@ def pick_name():
     return ok(name)
 
 def pick_occupation():
-    occupation = random.sample(occupations, 1)[0]
+    print("Would you like a normal job? (Y/n) ", end='', flush=True)
+    answer = getch()
+    print()
+
+    if answer.lower() == "y":
+        occupation = random.sample(occupations, 1)[0]
+    else:
+        occupation = random.sample(occupations_weird, 1)[0]
     cprint("Your occupation is:", 'blue')
     cprint(occupation, 'red', attrs=['bold'])
     print()
