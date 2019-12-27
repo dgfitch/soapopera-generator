@@ -1,3 +1,5 @@
+Clone of a Famous Person
+Mad Scientist
 Celebrity Admirer
 IKEA Model
 Curator of Ancient Clothes
@@ -52,3 +54,5 @@ Steamboat Tug Driver
 Employee of "The Samurai"
 Spider Merchant
 Wallbanger
+Ghost
+Re-Animated Corpse
